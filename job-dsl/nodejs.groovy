@@ -1,4 +1,4 @@
-job('NodeJS example') {
+job('NodeJS test app') {
     scm {
         git('git://github.com/tul1/nodejs-app.git') {  node ->
             node / gitConfigName('DSL User')
