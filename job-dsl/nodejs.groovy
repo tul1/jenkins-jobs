@@ -1,7 +1,9 @@
-job('Node example') {
-    scm('https://github.com/tul1/jenkins-jobs.git') { node ->
-        node / gitConfigName('DSL User')
-        node / gitConfigEmail('tula.patricio@gmail.com')
+job('NodeJS example') {
+    scm {
+        git('git://github.com/tul1/jenkins-jobs.git') {  node -> // is hudson.plugins.git.GitSCM
+            node / gitConfigName('DSL User')
+            node / gitConfigEmail('tula.patricio@gmail.com')
+        }
     }
     triggers {
         scm('H/5 * * * *')
